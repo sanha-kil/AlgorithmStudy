@@ -18,7 +18,7 @@ def fibonacci_recursion(x):         #재귀
         return 1
     elif x == 2:
         return 2
-    answer = fibonacci_recursion(x-1) + fibonacci_recursion(x-2)
+    answer = fibonacci_recursion(x-2) + fibonacci_recursion(x-1)
     return answer
 
 k = int(input('값을 입력해주세요 : '))
