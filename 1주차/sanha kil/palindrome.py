@@ -11,6 +11,7 @@ def palindrome(s):
             if s[j:i] and str(s[j:i]) == str(s[j:i])[::-1]:
                 sentence.append(len(s[j:i]))
     return max(sentence)                                        # max(s) : 반복가능한 자료형을 받아 그 중 최대값을 리턴해 줌
-
-a = input("문자열을 입력하세요 : ")
-print(palindrome(a))
+ 
+if __name__ == "__main__":
+    a = input("문자열을 입력하세요 : ")
+    print(palindrome(a))

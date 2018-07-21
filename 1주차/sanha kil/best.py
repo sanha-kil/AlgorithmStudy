@@ -6,7 +6,7 @@
 
 def best(n, s):
     if n > s:
-        return [-1]
+        return [-1]                     # n > s 일 때 집합성립X
     
     else:
         answer = [s//n] * n
