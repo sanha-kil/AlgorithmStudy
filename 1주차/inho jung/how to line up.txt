@@ -1,0 +1,20 @@
+#include <string>
+#include <vector>
+
+using namespace std;
+
+vector<int> solution(int n, long long k) {
+    vector<int> answer ,sample;
+    long long factorial = 1; k--;
+    for(int i = 1; i<= n ; i++){
+        factorial *= i;
+        sample.push_back(i);
+    }
+    while(n >0){
+        factorial = factorial / n--;
+        answer.push_back(sample.at(k/factorial));
+        sample.erase(sample.begin()+ k/factorial);
+        k %= factorial;
+    }
+    return answer;
+}
