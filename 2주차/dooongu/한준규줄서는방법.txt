@@ -1,0 +1,66 @@
+//틀렸지만 다른 접근방법
+//랜덤함수사용
+#include <string>
+#include <vector>
+#include<time.h>
+#include<algorithm>
+using namespace std;
+
+vector<int> solution(int n, long long k) {
+	vector<int> answer;
+	int a[], b, c, d[];
+	int count_1 = 0;
+	for (int t = 1; t <= n; ++t) {
+		pack *= t;
+	} // n!
+	for (int z = 0; z<n; z++) {
+		a[z] = z + 1; // 1 2 3 저장
+	}
+
+	while (count_1 == pack) {
+		int count = 1;
+		for (int i = 1; i<n; i++) {
+			count *= 10;
+		} // n에 따른 최대 10의 배수,,,?
+		  //b에 셔플한 값 넣음     
+		for (i = 0; i<n; i++) {
+
+			b += count*a[i]; // 100, 20, 3 다 더하면 123, count는 자릿수
+			c += count*a[n - i]; // 321
+
+
+			count /= 10
+		}
+		//값을 새로운 배열에 저장
+		d[count_1] = b;
+		count_1++;
+
+		//셔플
+		int Q, W, R;
+		srand(unsigned int(time(NULL)));
+		for (int j = 0; j<100; j++) {
+			Q = rand() % n;
+			W = rand() % n;
+
+			R = a[Q];
+			a[Q] = a[W];
+			a[W] = R;
+		}
+		sort[d, d + n - 1]
+			for (int i = 0; i<n; i++) {
+				d[i]
+			}
+		for (int i = 1; i<n; i++) {
+			count_2 *= 10;
+		} // n에 따른 최대 10의 배수,,,?
+		for (int i = 0; i<n; i++) {
+			int p = d[k];
+			answer[i] = p / count_2; // [1][2][3]
+
+			count_2 /= 10
+		}
+	}
+
+
+	return answer;
+}
