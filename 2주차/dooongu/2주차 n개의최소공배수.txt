@@ -1,0 +1,32 @@
+gcd 함수 호출하는 법 몰라서 인터넷 찾아봤어염
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+long long gcd(long long high, long long low)
+{
+	if (low == 0)
+	{
+		return high;
+	}
+	else
+	{
+		return gcd(low, high % low);
+	}
+}
+long long nlcm(vector<int> num)
+{
+	const int numSize = num.size();
+	long long answer = num[0];
+	int number = 0;
+	long long high = 0;
+	long long low = 0;
+	for (int i = 1; i < numSize; i++)
+	{
+		number = num[i];
+		high = fmax(answer, number);
+		low = fmin(answer, number);
+		answer = high * low / gcd(high, low);
+	}
+	return answer;
+}
