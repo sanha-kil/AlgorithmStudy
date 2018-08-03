@@ -1,0 +1,19 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+int min(int a, int b, int c){
+    return (a>b) ? ((b>c) ? c : b) : ((a>c) ? c : a);
+}
+int solution(vector<vector<int>> board)
+{
+    int answer = 0;
+    for(int row = 0; row<board.size(); row++){
+        for(int col =0; col<board[0].size(); col++){
+            if(board[row][col] !=0 && row != 0 && col != 0){
+                board[row][col] = min(board[row-1][col],board[row][col-1],board[row-1][col-1])+1;
+                answer = (board[row][col] > answer ) ? board[row][col] : answer;
+            }
+        }
+    }
+    return answer*answer;
+}
