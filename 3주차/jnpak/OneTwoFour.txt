@@ -1,0 +1,52 @@
+class Solution { // 배열 이용
+    public String solution(int n) {
+        String answer = "";
+        int[] arr = {4, 1, 2};
+        int a;
+        while (n > 0) {
+            a = n % 3;
+            n = n / 3;
+            if (a == 0) {
+                n -= 1;
+            }
+            answer = arr[a] + answer;
+        }
+        return answer;
+ 
+    }
+}
+
+import java.util.List;
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.Collections;
+
+class Solution { // 리스트 사용 왜틀린지 모르겟음 ㅡㅡ
+	public static String solution(int n) {
+		String answer = " ";
+		int mok = 1;
+		int nam;
+
+		List<Integer> num = new ArrayList<Integer>();
+
+		while (mok > 0) {
+			mok = n / 3;
+			nam = n % 3;
+			if (nam == 0) {
+				mok -= 1;
+				num.add(4);
+			} else {
+				num.add(nam);
+			}
+			n = mok;
+		}
+		Collections.reverse(num); //리스트 역순
+		String[] nArray = num.toArray(new String[num.size()]);
+	    answer = Arrays.toString(nArray);
+		return answer;
+	}
+
+	public static void main(String argsp[]) {
+		System.out.println(solution(15));
+	}
+}

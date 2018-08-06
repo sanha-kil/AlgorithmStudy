@@ -1,0 +1,25 @@
+import java.util.ArrayList;
+
+class Solution { // 카탈랑수를 이용하면 해답이 가능하나 팩토리얼을 사용하면 정수 범위 초과 
+    public static int solution(int n) {  // 결국 틀림.. 수가 커지면 메모리 초과
+        int answer = 0;
+        long an=0;
+        ArrayList<Long> arr = new ArrayList<Long>();
+        
+        arr.add((long)1); arr.add((long)2);
+        for(int i=2; i <=14;i++)
+            arr.add(i, ((fac(2*(i+1)))/(fac(i+1)*fac(i+2))));
+        
+            an = arr.get(n-1);
+            answer = (int)an;
+        return answer;
+    }
+    public static long fac(int n) {
+		long result = 1;
+
+		for (int i = n; i > 0; i--)
+			result *= i;
+		return result;
+	}
+
+}
