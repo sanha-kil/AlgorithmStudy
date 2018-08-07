@@ -1,0 +1,14 @@
+using namespace std;
+int combination(int n, int r){
+    if(n==r||r== 0) return 1;
+    else return combination(n-1,r-1)+combination(n-1,r);
+}
+int solution(int n) {
+    int answer = 0;
+    int fix = n;
+    for(int i=0 ; i<fix ; i++){
+        if(n>=i) answer += combination(n,i);
+        n--;
+    }
+    return answer;
+}
