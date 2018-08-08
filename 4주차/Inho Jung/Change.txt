@@ -1,0 +1,17 @@
+#include <string>
+#include <vector>
+
+using namespace std;
+
+int solution(int n, vector<int> money) {
+    int answer = 0;
+    int dp[100001];
+    dp[0] = 1;
+    for(int i = 0; i < money.size() ; i++){
+        int k = money[i];
+        for(int a=k ; a<=n; a++){
+            dp[a] += dp[a-k];
+        }
+    }
+    return dp[n];
+}
