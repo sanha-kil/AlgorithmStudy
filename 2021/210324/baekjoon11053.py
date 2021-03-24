@@ -11,5 +11,4 @@ for i in range(1, n):
         if arr[j] < arr[i]:
             k[i] = max(k[i], k[j]+1)
 
-print(k)
 print(max(k))
