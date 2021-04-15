@@ -2,7 +2,7 @@
 
 >
 ### 문제
-[백준 xxx번 ''](https://www.acmicpc.net/problem/xx)
+[백준 번 ](https://www.acmicpc.net/problem/)
 
 ***
 ### 풀이
