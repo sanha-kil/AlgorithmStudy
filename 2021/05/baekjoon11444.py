@@ -2,10 +2,11 @@ import sys
 input = sys.stdin.readline
 
 def fibo(n):
-    sqrt_5 = 5 ** (1/2)
-    ans = 1 / sqrt_5 * ( ((1 + sqrt_5) / 2) ** n  - ((1 - sqrt_5) / 2) ** n )
-    return int(ans)
+    sq5 = 5**(0.5)
+    answer = 1/sq5*(((1+sq5)/2)**n - ((1-sq5)/2)**n)
+    return int(answer)
 
 n = int(input())
 
-print(fibo(n)%1000000007)
+print(fibo(n))
+
