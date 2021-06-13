@@ -4,14 +4,14 @@ import sys
 input = sys.stdin.readline
 
 k, n = map(int, input().split())
-lan = [int(input()) for _ in range(k)]
-left, right = 1, max(lan)
+line = [int(input()) for _ in range(k)]
+left, right = 1, max(line)
 
 while left <= right:
     mid = (left + right) // 2
     tmp = 0
-    
-    for i in lan:
+
+    for i in line:
         tmp += i // mid
         
     if tmp >= n:
