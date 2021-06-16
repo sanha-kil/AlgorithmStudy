@@ -1,4 +1,5 @@
 # 벡준 2110번 문제 "공유기 설치"
+# 이진탐색
 
 import sys
 input =sys.stdin.readline

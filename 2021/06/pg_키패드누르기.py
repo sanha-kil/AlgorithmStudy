@@ -1,3 +1,6 @@
+# 프로그래머스 1단계 "키패드 누르기"
+# 2020 카카오 인턴십 출제
+
 import sys
 input = sys.stdin.readline
 

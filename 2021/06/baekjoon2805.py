@@ -1,4 +1,5 @@
 # 백준 2805번 문제 "나무 자르기"
+# 이진탐색
 
 import sys
 input = sys.stdin.readline
