@@ -1,3 +1,5 @@
+# 프로그래머스 1단계 "메뉴 리뉴얼"
+
 def solution(answers):
   k = len(answers)
   a = [1,2,3,4,5] * ((k//5)+1)

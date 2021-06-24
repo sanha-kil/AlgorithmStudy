@@ -1,3 +1,6 @@
+# 프로그래머스 2단계 "메뉴 리뉴얼"
+# 카카오 2020 공채 출제
+
 from itertools import combinations
 from collections import Counter
 

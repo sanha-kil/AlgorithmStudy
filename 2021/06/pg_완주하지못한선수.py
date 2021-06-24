@@ -1,3 +1,5 @@
+# 프로그래머스 1단계 "완주하지 못한 선수"
+
 import sys
 input = sys.stdin.readline
 

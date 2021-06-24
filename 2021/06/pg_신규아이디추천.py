@@ -1,3 +1,6 @@
+# 프로그래머스 1단계 "신규 아이디 추천"
+# 카카오 2021 공채 출제
+
 import re
 
 def solution(new_id):
