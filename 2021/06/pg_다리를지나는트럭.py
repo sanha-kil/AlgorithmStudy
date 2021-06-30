@@ -8,9 +8,8 @@ def solution(bridge_length, weight, truck_weights):
   truck = deque(truck_weights)
   on_bridge = deque([truck.popleft()])
   cross = deque([0])
-  while 1:
+  while on_bridge:
     time += 1
-    print(time)
 
     for i in range(len(on_bridge)):
       cross[i] += 1
@@ -22,9 +21,8 @@ def solution(bridge_length, weight, truck_weights):
     if truck and (sum(on_bridge) + truck[0]) <= weight and len(on_bridge) < bridge_length:
       on_bridge.append(truck.popleft())
       cross.append(0)
-
-    if not on_bridge:
-      return time
+  
+  return time
 
 
 print(solution(100,100,[10]))
