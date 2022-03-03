@@ -30,5 +30,3 @@ def solution2(arr, k, t):
   return answer
 
 print(solution2([2,5,3,8,1],3,11))
-
-select id, name, salaty bran
